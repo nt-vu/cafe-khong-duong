@@ -1,6 +1,6 @@
 const path = require('path');
 const express = require('express');
-const morgan = require('morgan');
+// const morgan = require('morgan');
 const handlebars = require('express-handlebars');
 const app = express();
 const port = process.env.PORT || 3000;
@@ -21,7 +21,7 @@ app.use(
 app.use(express.json());
 
 // HTTP logger
-app.use(morgan('combined'));
+// app.use(morgan('combined'));
 
 // Template engine
 app.engine(
