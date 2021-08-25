@@ -1,0 +1,22 @@
+
+<div class="blog-title">
+    <h1 class="blog-logo">ALL BLOG</h1>
+</div>
+
+{{#each posts}}
+<div class="blog-content">
+    <li class="content-item">
+        <a href="/posts/{{this.slug}}">
+            <img class="post-img" src="{{this.image}}" alt="">
+        </a>
+        <div class="post-content">
+            <a href="/posts/{{this.slug}}" class="post-title">
+                <h4 >{{this.title}}</h4>
+            </a>
+            <p class="post-description">
+                {{this.description}}
+            </p>
+        </div> 
+    </li>
+</div>
+{{/each}}

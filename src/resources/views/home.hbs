@@ -1,0 +1,25 @@
+<div class="header__introduce">
+    <h1 id="brand">HaPi's Sweet Home</h1>
+    <h5 id="brand__description">Stay hungry, stay foolish</h5>
+</div>
+{{#each posts}}
+<div class="content">
+    <ul class="content-list" >
+        <li class="content-item">
+            <a href="/posts/{{this.slug}}">
+                <img class="post-img" src="{{this.image}}" alt="">
+            </a>
+            <div class="post-content">
+                <a class="post-title" href="/posts/{{this.slug}}">
+                    <h3 >{{this.title}}</h3>
+                </a>
+                <p class="post-description">
+                    {{this.description}}
+                </p>
+            </div>
+        </li>
+
+    </ul>
+</div>
+{{/each}}
+<a id="see-all" href="./posts"><p >See All...</p></a>

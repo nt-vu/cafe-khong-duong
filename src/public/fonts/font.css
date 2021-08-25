@@ -1,0 +1,28 @@
+@font-face {
+    font-family: Kleeone1;
+    src: url('./KleeOne-Regular.ttf');
+}
+
+@font-face {
+    font-family: Kleeone2;
+    src: url('./KleeOne-SemiBold.ttf');
+}
+
+@font-face {
+    font-family: Inconsolata;
+    src: url('static/Inconsolata_SemiExpanded/Inconsolata_SemiExpanded-Black.ttf');
+}
+
+@font-face {
+    font-family: OpenSansI;
+    src: url(OpenSansCondensed-LightItalic.ttf);
+}
+@font-face {
+    font-family: OpenSansN;
+    src: url(OpenSansCondensed-Light.ttf);
+}
+
+@font-face {
+    font-family: OpenSansRLI;
+    src: url(OpenSans-LightItalic.ttf);
+}
