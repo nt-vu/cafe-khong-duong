@@ -1,10 +1,11 @@
-  <div class="footer">
+<div class="footer_contact">
+    <div class="footer" id="footer_id">
     <h2 class="subscribe">Send to me!</h2>
     <div class="form">
         <div class="child-form">
             <div class="form-items">
                 <p class="form-items__text" for="">Name</p>
-                <input class="form-items__input" type="text">
+                <input class="form-items__input" type="text" name="Name" id="fullname">
             </div>
             
             <div class="form-items">
@@ -17,7 +18,7 @@
                 <input class="form-items__input" id="message-input" type="text">
             </div>
         </div>
-        <button id= "send_email_btn">Send</button>
+        <button type="button" id= "send_email_btn">Send</button>
     </div>
 </div>
 
@@ -47,3 +48,67 @@
     
             
 </div>
+
+</div>
+
+
+<div class="menu-icon_list">
+    <ul class="menu-icon_items">
+        <li class="menu-icon_items-name">
+            <a href="/">Home</a>
+        </li>
+
+        <div class="striped-border"></div>
+
+        <li class="menu-icon_items-name">
+            <a href="/#blog_in_home">Recently</a>
+        </li>
+
+        <li class="menu-icon_items-name">
+            <a href="/posts">All blog</a>
+        </li>
+
+        <li class="menu-icon_items-name">
+            <a href="#footer_id">Contact</a>
+        </li>
+
+        <li class="menu-icon_items-name">
+            <a href="">Account</a>
+        </li>
+
+         <div class="striped-border"></div>
+    </ul>
+</div>
+
+<div class="go_home">
+    <a href="#home_id"><i class="fas fa-arrow-circle-up"></i></a>
+</div>
+
+<script>
+    var mobileMenu = document.getElementById('menu-icon_id')
+    var menuList = document.querySelector('.menu-icon_list')
+    
+    mobileMenu.onclick = function() {
+        if (menuList.classList.contains('open')) {
+            menuList.classList.add('close')
+            menuList.classList.remove('open')
+            
+            
+        }
+        else{
+            menuList.classList.remove('close')
+            menuList.classList.add('open')
+            
+        }
+    }
+
+    var itemsEl = document.querySelectorAll('.menu-icon_items-name a')
+    for(var i=0; i<itemsEl.length; i++){
+        var itemEl = itemsEl[i];
+        itemEl.onclick = function() {
+            menuList.classList.add('close')
+            menuList.classList.remove('open')
+        }
+    }
+    
+</script>

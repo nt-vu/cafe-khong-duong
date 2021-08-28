@@ -7,7 +7,7 @@ class SiteController {
         Post.find({})
             .then((posts) => {
                 res.render('home', {
-                    posts: mutipleMongooseToObject(posts),
+                    posts: mutipleMongooseToObject(posts).slice(0,3),
                 });
             })
             .catch(next);

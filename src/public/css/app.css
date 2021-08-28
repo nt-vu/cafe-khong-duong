@@ -1,10 +1,47 @@
+@font-face {
+  font-family: Kleeone1;
+  src: url("../fonts/KleeOne-Regular.ttf"); }
+
+@font-face {
+  font-family: Kleeone2;
+  src: url("../fonts/KleeOne-SemiBold.ttf"); }
+
+@font-face {
+  font-family: Inconsolata;
+  src: url("../fonts/Inconsolata-VariableFont_wdth,wght.ttf"); }
+
+@font-face {
+  font-family: OpenSansI;
+  src: url("../fonts/OpenSansCondensed-LightItalic.ttf"); }
+
+@font-face {
+  font-family: OpenSansN;
+  src: url("../fonts/OpenSansCondensed-Light.ttf"); }
+
+@font-face {
+  font-family: OpenSansRLI;
+  src: url("../fonts/OpenSans-LightItalic.ttf"); }
+
+@font-face {
+  font-family: OpenSansB;
+  src: url("../fonts/OpenSans-SemiBold.ttf"); }
+
+@font-face {
+  font-family: Lora;
+  src: url("../fonts/Lora-VariableFont_wght.ttf"); }
+
+@font-face {
+  font-family: Exo2;
+  src: url("../fonts/Exo2-VariableFont_wght.ttf"); }
+
 * {
   margin: 0;
   box-sizing: border-box; }
 
 html {
-  background-color: bisque;
-  font-family: 'Times New Roman', Times, serif; }
+  background-color: #f0cdc0;
+  font-family: 'Times New Roman', Times, serif;
+  scroll-behavior: smooth; }
 
 .navbar {
   transition: 2s;
@@ -23,40 +60,38 @@ html {
   text-align: center; }
 
 .search-input {
-  border: 1px solid #fff; }
+  border: 1px solid #fff;
+  font-family: Exo2; }
 
 .navbar-list {
   align-items: center;
   flex: 2; }
 
 .navbar-items {
-  transition: 1.29s;
   text-decoration: none;
   flex-basis: 30%;
-  font-family: 'Times New Roman', Times, serif;
-  font: inherit;
   color: black;
   display: inline-block;
-  margin: 0 80px;
+  margin: 0 50px;
   line-height: 30px;
-  width: 70px;
+  width: 75px;
   text-align: center; }
 
 .navbar-items:hover {
   background-color: rgba(60, 59, 60, 0.16);
   border-radius: 5px; }
 
+.navbar-items > h5 {
+  font-family: OpenSansN;
+  font-size: 18px; }
+
 .navbar-user {
   margin-right: 50px;
   font-size: 26px;
   color: #060110; }
 
-.cover-img {
-  width: 100%;
-  height: 600px;
-  /* background-size: contain; */
-  object-fit: cover;
-  object-position: left; }
+.menu-icon {
+  display: none; }
 
 .header__introduce {
   /* margin-top: 46px; */
@@ -85,7 +120,7 @@ html {
   letter-spacing: 2px; }
 
 .content {
-  margin-top: 100px;
+  padding-top: 100px;
   /* height: 500px; */ }
 
 .content-list {
@@ -94,16 +129,15 @@ html {
 .content-item {
   display: flex;
   align-items: center;
-  /* margin-bottom: 32px; */
-  margin-left: 16%; }
+  margin-left: 16%;
+  margin-bottom: 16px; }
 
 .post-img {
   width: 200px;
   min-height: 180px;
   border: 10px solid #f3f3f3;
   border-radius: 30px;
-  /* outline: 1px solid rgb(0, 0, 0); */
-  margin-bottom: 12px; }
+  /* outline: 1px solid rgb(0, 0, 0); */ }
 
 .post-content {
   margin-left: 30px;
@@ -112,10 +146,10 @@ html {
 
 .post-title {
   text-decoration: none;
-  font-size: 20px;
+  font-size: 22px;
   letter-spacing: 1px;
   line-height: 36px;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: OpenSansN;
   text-transform: inherit;
   color: #102329;
   text-decoration: none; }
@@ -125,30 +159,46 @@ html {
 
 .post-description {
   margin-top: 8px;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: OpenSansRLI;
   font-weight: 200;
   font-size: 18px;
-  font-style: italic;
   color: #5a5a5a; }
 
 #see-all {
   float: right;
   margin-right: 30%;
   margin-top: -10px;
-  text-decoration: none; }
+  text-decoration: none;
+  height: 36px;
+  width: 80px;
+  text-align: center;
+  line-height: 36px;
+  color: honeydew;
+  border-radius: 8px;
+  font-style: bold;
+  font-family: Exo2;
+  box-shadow: 6px 6px 6px -4px black;
+  background-color: black; }
+
+#see-all:hover {
+  background: #1e1e1e; }
+
+.footer_contact {
+  display: block; }
 
 .footer {
   height: 600px;
   margin-top: 60px;
   background-color: #8d80e1;
-  margin-bottom: 50px; }
+  margin-bottom: 60px; }
 
 .subscribe {
   text-align: center;
-  padding-top: 30px; }
+  padding-top: 30px;
+  font-family: Exo2; }
 
 .form {
-  width: 500px;
+  width: 80%;
   height: 430px;
   background-color: #fff;
   margin: 0 auto;
@@ -168,24 +218,33 @@ html {
 
 .form-items__text {
   min-width: 80px;
-  margin-bottom: 8px; }
+  margin-bottom: 8px;
+  font-family: Exo2; }
 
 .form-items__input {
   text-align: center;
-  width: 90%; }
+  width: 90%;
+  outline: none; }
 
 #message-input {
   height: 160px; }
 
 #send_email_btn {
-  width: 50px;
-  margin-left: 80%;
-  font-weight: bolder;
-  color: #4f66e2;
-  background: white;
-  padding: 5px 8px;
+  width: 80px;
+  height: 36px;
+  font-size: 21px;
+  margin-left: 75%;
+  text-align: center;
+  font-family: OpenSansN;
+  color: #ffffff;
+  background: #141415;
+  padding: 0;
   border-radius: 5px;
   box-shadow: 6px 6px 12px -4px black; }
+
+#send_email_btn:hover {
+  opacity: 0.96;
+  cursor: pointer; }
 
 .contact {
   height: 60px; }
@@ -193,7 +252,9 @@ html {
 .contact__items {
   width: 50%;
   margin: 0 auto;
-  text-align: center; }
+  text-align: center;
+  font-family: OpenSansN;
+  letter-spacing: 1px; }
 
 .contact__items-copyright {
   margin-bottom: 12px; }
@@ -216,12 +277,13 @@ html {
   text-decoration: none; }
 
 .blog-title {
-  margin-top: 20px; }
+  margin-top: 60px; }
 
 .blog-logo {
   text-align: center;
-  font-family: Kreeone1;
-  margin-bottom: 21px; }
+  font-family: OpenSansN;
+  margin-bottom: 80px;
+  font-size: 50px; }
 
 .view-post__header {
   text-align: center; }
@@ -250,11 +312,51 @@ html {
   width: 90%;
   height: auto; }
 
-#view_post__content {
+.view_post__content {
   display: block;
   width: 80%;
   margin: 0 auto;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: Exo2;
   font-size: 18px;
-  line-height: 26px;
   text-align: justify; }
+
+.menu-icon_list {
+  opacity: 0; }
+
+.go_home > a {
+  position: fixed;
+  top: 93.9vh;
+  right: 6px;
+  color: #000;
+  font-size: 30px;
+  opacity: 0.2; }
+
+.go_home > a:hover {
+  opacity: 0.8; }
+
+.end-post {
+  margin-top: 31px;
+  text-align: center;
+  font-family: Keeone1; }
+
+.suggest-post {
+  display: block;
+  text-align: center;
+  background-color: #000;
+  width: 100px;
+  height: 36px;
+  margin: 0 auto;
+  margin-top: 50px;
+  margin-right: 21px;
+  line-height: 36px;
+  border-radius: 5px; }
+
+.suggest-post_item {
+  text-decoration: none;
+  color: #fff;
+  font-family: Exo2;
+  font-style: initial; }
+
+.suggest-post:hover {
+  background-color: rgba(22, 21, 21, 0.96);
+  cursor: pointer; }

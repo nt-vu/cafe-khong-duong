@@ -1,90 +1,36 @@
-Inconsolata Variable Font
-=========================
+Exo 2 Variable Font
+===================
 
-This download contains Inconsolata as both a variable font and static fonts.
+This download contains Exo 2 as both variable fonts and static fonts.
 
-Inconsolata is a variable font with these axes:
-  wdth
+Exo 2 is a variable font with this axis:
   wght
 
-This means all the styles are contained in a single file:
-  Inconsolata-VariableFont_wdth,wght.ttf
+This means all the styles are contained in these files:
+  Exo2-VariableFont_wght.ttf
+  Exo2-Italic-VariableFont_wght.ttf
 
 If your app fully supports variable fonts, you can now pick intermediate styles
 that aren’t available as static fonts. Not all apps support variable fonts, and
-in those cases you can use the static font files for Inconsolata:
-  static/Inconsolata_UltraCondensed/Inconsolata_UltraCondensed-ExtraLight.ttf
-  static/Inconsolata_UltraCondensed/Inconsolata_UltraCondensed-Light.ttf
-  static/Inconsolata_UltraCondensed/Inconsolata_UltraCondensed-Regular.ttf
-  static/Inconsolata_UltraCondensed/Inconsolata_UltraCondensed-Medium.ttf
-  static/Inconsolata_UltraCondensed/Inconsolata_UltraCondensed-SemiBold.ttf
-  static/Inconsolata_UltraCondensed/Inconsolata_UltraCondensed-Bold.ttf
-  static/Inconsolata_UltraCondensed/Inconsolata_UltraCondensed-ExtraBold.ttf
-  static/Inconsolata_UltraCondensed/Inconsolata_UltraCondensed-Black.ttf
-  static/Inconsolata_ExtraCondensed/Inconsolata_ExtraCondensed-ExtraLight.ttf
-  static/Inconsolata_ExtraCondensed/Inconsolata_ExtraCondensed-Light.ttf
-  static/Inconsolata_ExtraCondensed/Inconsolata_ExtraCondensed-Regular.ttf
-  static/Inconsolata_ExtraCondensed/Inconsolata_ExtraCondensed-Medium.ttf
-  static/Inconsolata_ExtraCondensed/Inconsolata_ExtraCondensed-SemiBold.ttf
-  static/Inconsolata_ExtraCondensed/Inconsolata_ExtraCondensed-Bold.ttf
-  static/Inconsolata_ExtraCondensed/Inconsolata_ExtraCondensed-ExtraBold.ttf
-  static/Inconsolata_ExtraCondensed/Inconsolata_ExtraCondensed-Black.ttf
-  static/Inconsolata_Condensed/Inconsolata_Condensed-ExtraLight.ttf
-  static/Inconsolata_Condensed/Inconsolata_Condensed-Light.ttf
-  static/Inconsolata_Condensed/Inconsolata_Condensed-Regular.ttf
-  static/Inconsolata_Condensed/Inconsolata_Condensed-Medium.ttf
-  static/Inconsolata_Condensed/Inconsolata_Condensed-SemiBold.ttf
-  static/Inconsolata_Condensed/Inconsolata_Condensed-Bold.ttf
-  static/Inconsolata_Condensed/Inconsolata_Condensed-ExtraBold.ttf
-  static/Inconsolata_Condensed/Inconsolata_Condensed-Black.ttf
-  static/Inconsolata_SemiCondensed/Inconsolata_SemiCondensed-ExtraLight.ttf
-  static/Inconsolata_SemiCondensed/Inconsolata_SemiCondensed-Light.ttf
-  static/Inconsolata_SemiCondensed/Inconsolata_SemiCondensed-Regular.ttf
-  static/Inconsolata_SemiCondensed/Inconsolata_SemiCondensed-Medium.ttf
-  static/Inconsolata_SemiCondensed/Inconsolata_SemiCondensed-SemiBold.ttf
-  static/Inconsolata_SemiCondensed/Inconsolata_SemiCondensed-Bold.ttf
-  static/Inconsolata_SemiCondensed/Inconsolata_SemiCondensed-ExtraBold.ttf
-  static/Inconsolata_SemiCondensed/Inconsolata_SemiCondensed-Black.ttf
-  static/Inconsolata/Inconsolata-ExtraLight.ttf
-  static/Inconsolata/Inconsolata-Light.ttf
-  static/Inconsolata/Inconsolata-Regular.ttf
-  static/Inconsolata/Inconsolata-Medium.ttf
-  static/Inconsolata/Inconsolata-SemiBold.ttf
-  static/Inconsolata/Inconsolata-Bold.ttf
-  static/Inconsolata/Inconsolata-ExtraBold.ttf
-  static/Inconsolata/Inconsolata-Black.ttf
-  static/Inconsolata_SemiExpanded/Inconsolata_SemiExpanded-ExtraLight.ttf
-  static/Inconsolata_SemiExpanded/Inconsolata_SemiExpanded-Light.ttf
-  static/Inconsolata_SemiExpanded/Inconsolata_SemiExpanded-Regular.ttf
-  static/Inconsolata_SemiExpanded/Inconsolata_SemiExpanded-Medium.ttf
-  static/Inconsolata_SemiExpanded/Inconsolata_SemiExpanded-SemiBold.ttf
-  static/Inconsolata_SemiExpanded/Inconsolata_SemiExpanded-Bold.ttf
-  static/Inconsolata_SemiExpanded/Inconsolata_SemiExpanded-ExtraBold.ttf
-  static/Inconsolata_SemiExpanded/Inconsolata_SemiExpanded-Black.ttf
-  static/Inconsolata_Expanded/Inconsolata_Expanded-ExtraLight.ttf
-  static/Inconsolata_Expanded/Inconsolata_Expanded-Light.ttf
-  static/Inconsolata_Expanded/Inconsolata_Expanded-Regular.ttf
-  static/Inconsolata_Expanded/Inconsolata_Expanded-Medium.ttf
-  static/Inconsolata_Expanded/Inconsolata_Expanded-SemiBold.ttf
-  static/Inconsolata_Expanded/Inconsolata_Expanded-Bold.ttf
-  static/Inconsolata_Expanded/Inconsolata_Expanded-ExtraBold.ttf
-  static/Inconsolata_Expanded/Inconsolata_Expanded-Black.ttf
-  static/Inconsolata_ExtraExpanded/Inconsolata_ExtraExpanded-ExtraLight.ttf
-  static/Inconsolata_ExtraExpanded/Inconsolata_ExtraExpanded-Light.ttf
-  static/Inconsolata_ExtraExpanded/Inconsolata_ExtraExpanded-Regular.ttf
-  static/Inconsolata_ExtraExpanded/Inconsolata_ExtraExpanded-Medium.ttf
-  static/Inconsolata_ExtraExpanded/Inconsolata_ExtraExpanded-SemiBold.ttf
-  static/Inconsolata_ExtraExpanded/Inconsolata_ExtraExpanded-Bold.ttf
-  static/Inconsolata_ExtraExpanded/Inconsolata_ExtraExpanded-ExtraBold.ttf
-  static/Inconsolata_ExtraExpanded/Inconsolata_ExtraExpanded-Black.ttf
-  static/Inconsolata_UltraExpanded/Inconsolata_UltraExpanded-ExtraLight.ttf
-  static/Inconsolata_UltraExpanded/Inconsolata_UltraExpanded-Light.ttf
-  static/Inconsolata_UltraExpanded/Inconsolata_UltraExpanded-Regular.ttf
-  static/Inconsolata_UltraExpanded/Inconsolata_UltraExpanded-Medium.ttf
-  static/Inconsolata_UltraExpanded/Inconsolata_UltraExpanded-SemiBold.ttf
-  static/Inconsolata_UltraExpanded/Inconsolata_UltraExpanded-Bold.ttf
-  static/Inconsolata_UltraExpanded/Inconsolata_UltraExpanded-ExtraBold.ttf
-  static/Inconsolata_UltraExpanded/Inconsolata_UltraExpanded-Black.ttf
+in those cases you can use the static font files for Exo 2:
+  static/Exo2-Thin.ttf
+  static/Exo2-ExtraLight.ttf
+  static/Exo2-Light.ttf
+  static/Exo2-Regular.ttf
+  static/Exo2-Medium.ttf
+  static/Exo2-SemiBold.ttf
+  static/Exo2-Bold.ttf
+  static/Exo2-ExtraBold.ttf
+  static/Exo2-Black.ttf
+  static/Exo2-ThinItalic.ttf
+  static/Exo2-ExtraLightItalic.ttf
+  static/Exo2-LightItalic.ttf
+  static/Exo2-Italic.ttf
+  static/Exo2-MediumItalic.ttf
+  static/Exo2-SemiBoldItalic.ttf
+  static/Exo2-BoldItalic.ttf
+  static/Exo2-ExtraBoldItalic.ttf
+  static/Exo2-BlackItalic.ttf
 
 Get started
 -----------

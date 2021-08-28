@@ -2,9 +2,10 @@
     <h1 id="brand">HaPi's Sweet Home</h1>
     <h5 id="brand__description">Stay hungry, stay foolish</h5>
 </div>
-{{#each posts}}
-<div class="content">
+
+<div class="content" id="blog_in_home">
     <ul class="content-list" >
+        {{#each posts}}
         <li class="content-item">
             <a href="/posts/{{this.slug}}">
                 <img class="post-img" src="{{this.image}}" alt="">
@@ -18,8 +19,8 @@
                 </p>
             </div>
         </li>
-
+    {{/each}}
     </ul>
 </div>
-{{/each}}
+
 <a id="see-all" href="./posts"><p >See All...</p></a>
