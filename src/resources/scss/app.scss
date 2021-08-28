@@ -137,11 +137,11 @@ html{
 }
 
 .cover-img{
-    // width: 100%;
-    // // height: 600px;
-    // background-size: contain; 
-    // object-fit:cover;
-    // object-position: left;
+    width: 30%;
+    height: 300px;
+    background-size: contain; 
+    object-fit:cover;
+    object-position: left;
 }
 
 .header__introduce{
@@ -152,7 +152,7 @@ html{
 }
 
 #brand{
-    color: #fff;
+    color: rgb(28, 26, 26);
     position: absolute;
     top: 50px;
     font-family: Kleeone2;
@@ -261,8 +261,8 @@ html{
 .footer{
     height: 600px;
     margin-top: 60px;
-    background-color: rgb(141, 128, 225);
-    // margin: 0 auto;
+    background-color: rgb(174, 165, 232);
+    border-radius: 5px;
     margin-bottom: 60px;
     
 }
@@ -304,7 +304,7 @@ html{
 }
 
 .form-items__input{
-    text-align: center;
+    
     width: 90%;
     outline: none;
     
@@ -314,6 +314,7 @@ html{
 
 #message-input{
     height: 160px;
+    resize: none;
 }
 
 #send_email_btn{
@@ -405,12 +406,15 @@ html{
     font-size: 50px;
     display: block;
     max-width: 86%;
+    font-family: OpenSansN ;
+    letter-spacing: 0.5px;
 
 }
 
 #view-post__description{
     margin: 0 auto;
-    font-style: italic;
+    font-family: OpenSansRLI;
+    // font-style: italic;
     text-align: center;
     margin-top: 21px;
     font-size: 18px;
