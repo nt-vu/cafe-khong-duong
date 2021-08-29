@@ -164,16 +164,15 @@
 
 
     #brand{
-        font-size: 26px;
-        margin-top: 28px;
+        font-size: 22px;
         letter-spacing: 1.2px;
     }
 
     #brand__description{
-        font-size: 15px;
-    }
+        font-size: 28px;
+        top: 100px !important;
 
-    
+    }
 
     .content-list{
         padding-left: 8px;
@@ -231,7 +230,8 @@
     }
 
     .go_home > a{
-        top: 90vh;
+        top: 80vh;
+        margin-right: 5px;
     }
 
     .suggest-post{

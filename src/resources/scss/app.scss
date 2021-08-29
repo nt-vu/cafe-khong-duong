@@ -149,7 +149,7 @@ html{
     padding-top: 50%;
     background: url('../img/cover.jpg') top center / cover no-repeat;
     position: relative;
-}
+   
 
 #brand{
     color: rgb(28, 26, 26);
@@ -159,6 +159,8 @@ html{
     font-size: 36px;
     width: 100%;
     text-align: center;
+    transition: 2s;
+    animation: fadein 2s;
 }
 
 #brand__description{
@@ -171,6 +173,21 @@ html{
     font-size: 16px;
     word-spacing: 2px;
     letter-spacing: 2px;
+
+    opacity:0;
+    animation: fadein 2s forwards;
+}
+}
+@keyframes fadein {
+    from {
+        opacity: 0;
+        transform: translateY(-100px); 
+    }
+    to { 
+        opacity: 1; 
+        transform: translateY(0); 
+
+    }
 }
 
 .content{
