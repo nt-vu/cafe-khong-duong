@@ -19,6 +19,10 @@
   src: url("../fonts/OpenSansCondensed-Light.ttf"); }
 
 @font-face {
+  font-family: OpenSans;
+  src: url("../fonts/OpenSans-Regular.ttf"); }
+
+@font-face {
   font-family: OpenSansRLI;
   src: url("../fonts/OpenSans-LightItalic.ttf"); }
 
@@ -34,22 +38,35 @@
   font-family: Exo2;
   src: url("../fonts/Exo2-VariableFont_wght.ttf"); }
 
+@font-face {
+  font-family: Nunito;
+  src: url("../fonts/Nunito-Regular.ttf"); }
+
+@font-face {
+  font-family: Josefin Sans;
+  src: url("../fonts/JosefinSans-VariableFont_wght.ttf"); }
+
+@font-face {
+  font-family: Pacifico;
+  src: url("../fonts/Pacifico-Regular.ttf"); }
+
 * {
   margin: 0;
   box-sizing: border-box; }
 
 html {
-  background-color: #f0cdc0;
+  background-color: white;
   font-family: 'Times New Roman', Times, serif;
   scroll-behavior: smooth; }
 
 .navbar {
   transition: 2s;
   height: 50px;
-  background-color: #fff;
+  background-color: #fcfcfc;
   display: flex;
   justify-content: space-around;
-  align-items: center; }
+  align-items: center;
+  box-shadow: 0px 1px 0px 0px #ccc; }
 
 .search-bar {
   line-height: 50px;
@@ -136,55 +153,44 @@ html {
     opacity: 1;
     transform: translateY(0); } }
 
+.container {
+  overflow: hidden; }
+
 .content {
-  padding-top: 100px;
-  /* height: 500px; */ }
+  padding-top: 100px; }
 
-.content-list {
-  list-style: none; }
+.content-items {
+  margin-top: 32px;
+  height: 200px; }
 
-.content-item {
-  display: flex;
-  align-items: center;
-  margin-left: 16%;
-  margin-bottom: 16px; }
+.content-img img {
+  width: 100%;
+  min-height: 150px;
+  max-height: 200px;
+  border: 2px solid #eee5e5;
+  border-radius: 20px; }
 
-.post-img {
-  width: 200px;
-  min-height: 180px;
-  border: 10px solid #f3f3f3;
-  border-radius: 30px;
-  /* outline: 1px solid rgb(0, 0, 0); */ }
+.content-text {
+  margin-top: 12px; }
 
-.post-content {
-  margin-left: 30px;
-  margin-top: -50px;
-  width: 400px; }
-
-.post-title {
+.content-text__title {
   text-decoration: none;
-  font-size: 22px;
-  letter-spacing: 1px;
-  line-height: 36px;
   font-family: OpenSansN;
-  text-transform: inherit;
-  color: #102329;
-  text-decoration: none; }
+  text-align: justify;
+  font-size: 21px;
+  color: #000; }
 
-.post-title:hover {
-  color: #06467e; }
-
-.post-description {
-  margin-top: 8px;
+.content-text__description {
   font-family: OpenSansRLI;
-  font-weight: 200;
-  font-size: 18px;
-  color: #5a5a5a; }
+  margin-top: 2px;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3; }
 
 #see-all {
   float: right;
-  margin-right: 30%;
-  margin-top: -10px;
+  margin-right: 10%;
   text-decoration: none;
   height: 36px;
   width: 80px;
@@ -200,108 +206,70 @@ html {
 #see-all:hover {
   background: #1e1e1e; }
 
-.footer_contact {
-  display: block; }
-
 .footer {
-  height: 600px;
-  margin-top: 60px;
-  background-color: #aea5e8;
-  border-radius: 5px;
-  margin-bottom: 60px; }
+  display: block;
+  height: 300px;
+  margin-top: 100px;
+  background-color: #afd7e8;
+  box-shadow: 0px 0px 2px 0px black; }
 
-.subscribe {
-  text-align: center;
-  padding-top: 30px;
-  font-family: Exo2; }
-
-.form {
-  width: 80%;
-  height: 430px;
-  background-color: #fff;
-  margin: 0 auto;
-  margin-top: 30px;
-  border-radius: 3%;
-  display: flex;
-  flex-direction: column;
-  border: thin solid #0c0909;
-  box-shadow: 1px 1px 2px 2px black; }
-
-.child-form {
-  margin-top: 30px; }
-
-.form-items {
-  margin-left: 10%;
-  margin-bottom: 20px; }
-
-.form-items__text {
-  min-width: 80px;
-  margin-bottom: 8px;
-  font-family: Exo2; }
-
-.form-items__input {
-  width: 90%;
-  outline: none; }
-
-#message-input {
-  height: 160px;
-  resize: none; }
-
-#send_email_btn {
-  width: 80px;
-  height: 36px;
-  font-size: 21px;
-  margin-left: 75%;
-  text-align: center;
-  font-family: OpenSansN;
-  color: #ffffff;
-  background: #141415;
-  padding: 0;
-  border-radius: 5px;
-  box-shadow: 6px 6px 12px -4px black; }
-
-#send_email_btn:hover {
-  opacity: 0.96;
-  cursor: pointer; }
-
-.contact {
-  height: 60px; }
-
-.contact__items {
+.footer__items {
+  display: block;
   width: 50%;
   margin: 0 auto;
+  padding-top: 10%;
   text-align: center;
   font-family: OpenSansN;
   letter-spacing: 1px; }
 
-.contact__items-copyright {
+.footer__items-copyright {
   margin-bottom: 12px; }
 
-.contact__items-social {
+.footer__items-social {
   word-spacing: 12px;
   font-size: 21px;
   padding-bottom: 30px; }
 
-.contact__facebook {
+.footer__facebook {
   color: #4b4bee;
   text-decoration: none; }
 
-.contact__instagram {
+.footer__instagram {
   color: #00f5e1;
   text-decoration: none; }
 
-.contact__youtube {
+.footer__youtube {
   color: #f22121;
   text-decoration: none; }
 
 .blog-title {
-  margin-top: 60px; }
-
-.blog-logo {
+  margin-top: 60px;
   text-align: center;
   font-family: OpenSansN;
   margin-bottom: 80px;
-  font-size: 50px; }
+  font-size: 32px; }
+
+.blog-content__item {
+  height: 200px;
+  margin-bottom: 62px; }
+
+.blog-content-img img {
+  width: 100%;
+  min-height: 200px;
+  border: 2px solid #434040;
+  border-radius: 10px; }
+
+.blog-content__text {
+  margin: 8px 0; }
+
+.blog-content__title {
+  text-decoration: none;
+  font-family: OpenSansN;
+  font-size: 26px;
+  color: #000; }
+
+.blog-content__description {
+  font-family: OpenSansRLI; }
 
 .view-post__header {
   text-align: center; }
@@ -336,23 +304,37 @@ html {
   display: block;
   width: 80%;
   margin: 0 auto;
-  font-family: Exo2;
-  font-size: 18px;
-  text-align: justify; }
+  font-family: Josefin Sans;
+  font-size: 20px;
+  text-align: justify;
+  line-height: 26px; }
 
 .menu-icon_list {
-  opacity: 0; }
+  display: none; }
+
+.go_home.show {
+  display: block; }
 
 .go_home > a {
+  color: #000; }
+
+.go_home {
+  display: none;
   position: fixed;
   top: 93.9vh;
   right: 6px;
-  color: #000;
   font-size: 30px;
-  opacity: 0.2; }
+  animation: arrowFadeIn ease 1s;
+  opacity: 0.5; }
 
-.go_home > a:hover {
-  opacity: 0.8; }
+@keyframes arrowFadeIn {
+  from {
+    opacity: 0; }
+  to {
+    opacity: 0.5; } }
+
+.go_home:hover {
+  opacity: 1; }
 
 .end-post {
   margin-top: 31px;

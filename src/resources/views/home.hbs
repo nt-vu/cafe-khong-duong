@@ -3,24 +3,70 @@
     <h5 id="brand__description">Stay hungry, stay foolish</h5>
 </div>
 
-<div class="content" id="blog_in_home">
-    <ul class="content-list" >
-        {{#each posts}}
-        <li class="content-item">
-            <a href="/posts/{{this.slug}}">
-                <img class="post-img" src="{{this.image}}" alt="">
-            </a>
-            <div class="post-content">
-                <a class="post-title" href="/posts/{{this.slug}}">
-                    <h3 >{{this.title}}</h3>
-                </a>
-                <p class="post-description">
-                    {{this.description}}
-                </p>
-            </div>
-        </li>
-    {{/each}}
-    </ul>
+<div class="grid wide">
+        <div class="content row" id="blog_in_home">
+            {{#each posts}}
+                <div class="col l-6 m-6 c-12">
+                    <div class="content-items row">
+                        <div class="col l-6 m-6 c-8 c-o-2">
+                            <div class="content-img">
+                                <a href="/posts/{{this.slug}}">
+                                    <img src="{{this.image}}" alt="">
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="col l-6 m-6 c-8 c-o-2">
+                            <div class="content-text">
+                                <a class="content-text__title" href="/posts/{{this.slug}}">
+                                    <h3 >{{this.title}}</h3>
+                                </a>
+                                
+                                <p class="content-text__description">
+                                    {{this.description}}
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            {{/each}}
+        </div>
 </div>
+
+{{!-- <div class="content" id="blog_in_home">
+    <div class="grid wide">
+        <div class="content-list row" >
+            {{#each posts}}
+            <div class="col l-6 m-12 c-12">
+                    <div class="content-item row">
+                        <div class="col l-6  ">
+                            <div class="post-img">
+                                <a href="/posts/{{this.slug}}">
+                                    <img src="{{this.image}}" alt="">
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="col l-6  ">
+                            <div class="post-content row">
+                                <div class="col l-12 m-12 c-12">
+                                    <a class="post-title" href="/posts/{{this.slug}}">
+                                        <h3 >{{this.title}}</h3>
+                                    </a>
+                                </div>
+
+                                <div class="col l-12 m-12 c-12">
+                                    <p class="post-description">
+                                        {{this.description}}
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+            </div>
+            {{/each}}
+        </div>
+    </div>
+</div> --}}
 
 <a id="see-all" href="./posts"><p >See All...</p></a>

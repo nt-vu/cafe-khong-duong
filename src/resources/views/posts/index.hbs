@@ -1,9 +1,38 @@
 
 <div class="blog-title">
-    <h1 class="blog-logo">All Blogs</h1>
+    <h1>All Blogs</h1>
 </div>
 
-{{#each posts}}
+<div class="grid wide">
+    <div class="blog-content row">
+        {{#each posts}}
+        <div class="col l-8 l-o-2 m-10 m-o-1 c-10 c-o-1">
+            <div class="blog-content__item row">
+                <div class="col l-4 m-4 c-5">
+                    <div class="blog-content-img">
+                        <a href="/posts/{{this.slug}}">
+                            <img src="{{this.image}}" alt="">
+                        </a>
+                    </div>
+                </div>
+
+                <div class="col l-8 m-8 c-7">
+                    <div class="blog-content__text">
+                        <a href="/posts/{{this.slug}}" class="blog-content__title">
+                            <h4 >{{this.title}}</h4>
+                        </a>
+                        <p class="blog-content__description">
+                            {{this.description}}
+                        </p>
+                    </div> 
+                </div>
+            </div>
+        </div>
+        {{/each}}
+    </div>
+</div>
+
+{{!-- {{#each posts}}
 <div class="blog-content">
     <li class="content-item">
         <a href="/posts/{{this.slug}}">
@@ -19,4 +48,4 @@
         </div> 
     </li>
 </div>
-{{/each}}
+{{/each}} --}}
