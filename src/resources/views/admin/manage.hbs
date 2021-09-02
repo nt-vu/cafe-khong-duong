@@ -1,0 +1,94 @@
+<h1>Manage Posts</h1>
+<div class="table">
+    <table>
+        <colgroup>
+            <col span="1" style="width: 2%;">
+            <col span="2" style="width: 40%;">
+            <col span="3" style="width: 38%;">
+            <col span="4" style="width: 20%;">
+        </colgroup>
+        {{!-- <caption>Posts List</caption> --}}
+        <tr>
+            <th class = "title">STT</th>
+            <th class = "title">Title</th>
+            <th class = "title">Created at</th>
+            <th class = "title">Function</th>
+        </tr>
+
+        {{#each posts}}
+            <tr class="table-item">
+                <th>1</th>
+                <th>{{this.title}}</th>
+                <th>{{this.createdAt}}</th>
+                <th>
+                    <a href="/admin/{{this._id}}/edit">Edit</a>
+                    <a href="" >Delete</a>
+                </th>
+            </tr>
+        {{/each}}
+    </table>
+</div>
+
+
+
+
+
+
+<style>
+    .footer{
+        display: none;
+    }
+
+    h1{
+        margin-left: 20px;
+        margin-top: 12px;
+    }
+
+    table {
+        margin: 0 auto;
+        width: 90%;
+    }
+
+    .table {
+        margin-top: 50px;
+    }
+
+    
+
+    .title{
+        text-align: center;
+        font-weight: 600;
+        font-size: 21px;
+
+    }
+    
+    table, th, td{
+        border: 1px solid #000;
+        border-collapse: collapse;
+    }
+
+    th{
+        padding: 8px 12px;
+        /*text-align: left;*/
+        border-bottom: 1px solid rgb(2, 1, 1);
+        font-family: OpenSans;
+        font-weight: 500;
+        font-size: 16px;
+    }
+
+    a{
+        margin: 0 12px;
+        text-decoration: none;
+        font-family: Kreeone2;
+        font-size: 23px;
+        color: rgb(69, 88, 135);
+        font-weight: 500;
+
+    }
+
+    a:hover{
+        color: rgb(10, 10, 10);
+    }
+}
+
+</style>

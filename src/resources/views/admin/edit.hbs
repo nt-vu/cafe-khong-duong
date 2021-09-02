@@ -1,0 +1,131 @@
+<div class="edit-post">
+    <h3>Update posts</h3>
+
+    <form method="POST", action="/admin/{{post._id}}?_method=PUT">
+        <div class="create_post-title">
+        <textarea name="title" >{{post.title}}</textarea>
+        </div>
+
+        <div class="create_post-description">
+            <textarea  name="description" >{{post.description}}</textarea>
+        </div>
+
+        <div class="create_post-content">
+            <textarea  name="content">{{post.content}}</textarea>
+        </div>
+
+        <div class="create_post-img">
+            <label for="">Image's link</label>
+            <input name="image" value="{{post.image}}">
+        </div>
+        <button type="submit" class="create_post-btn">UPDATE</button>
+    </form>
+
+    <div class="test">
+    <label for="image">Choose File</label>
+    <input type="file" name="image" id="inpfile" accept="image/*">
+    <div class="test-img">
+        <img src="" alt="" id="anh">
+    </div>
+</div>
+</div>
+
+<script>
+    var c = document.querySelector('.create_post-img input')
+    var a = document.querySelector('#anh');
+    var b = document.getElementById('inpfile');
+    b.addEventListener('change', function() {
+        const file = this.files[0];
+        console.log(c.value)
+        if(file) {
+            const reader = new FileReader();
+            reader.addEventListener('load', function() {
+                a.setAttribute('src', this.result);
+                c.value = this.result;
+                
+            });
+            reader.readAsDataURL(file);
+
+            
+        }
+    });
+
+</script>
+
+
+<style>
+    #anh{
+        height: 300px;
+        width: 300px;
+    }
+
+    .test-img{
+        margin-bottom: 300px;
+    }
+    .edit-post{
+        margin: 0 50px;
+        margin-top: 50px;
+    }
+
+    .create_post-title > textarea{
+        outline: none;
+        border: none; 
+        resize: none;
+        width: 100%;
+        font-family: OpenSansN ;
+        letter-spacing: 0.5px;
+        font-size: 50px;
+        font-weight: 600;
+        text-align: center;
+    }
+
+    .create_post-description{
+        margin-top: -60px;
+    }
+
+    .create_post-description > textarea{
+        outline: none;
+        border: none; 
+        width: 100%;
+        resize: none;
+        font-size: 18px;
+        font-family: OpenSansRLI;
+        text-align: center;
+        font-weight: 500;
+    }
+
+    .create_post-content > textarea{
+        outline: none;
+        border: none; 
+        width: 100%;
+        /* resize: none;*/
+        font-size: 20px;;
+        font-family: Josefin Sans;
+        text-align: justify;
+        line-height: 26px;
+        height: 900px;
+    }
+
+    .create_post-img{
+        margin-bottom: 30px;
+    }
+
+    .create_post-img > textarea{
+        margin-top: 10px;
+        width: 100%;
+        resize: none;
+    }
+
+    .create_post-btn{
+        float: right;
+        margin-right: 50px;
+        margin-bottom: 100px;
+    }
+
+    .header{
+        {{!-- display: none; --}}
+    }
+    .footer{
+        display: none;
+    }
+</style>

@@ -1,5 +1,5 @@
 const Post = require('../models/Post')
-const {mongooseToObject } = require('../../util/mongoose');
+const {mongooseToObject, mutipleMongooseToObject } = require('../../util/mongoose');
 
 class AdminController{
     index(req, res, next) {
@@ -20,6 +20,33 @@ class AdminController{
             .catch(error => {
                 
             })
+    }
+
+    // [GET] admin/manage
+    manage(req, res, next){
+        Post.find({})
+            .then( (posts) =>{
+                res.render('admin/manage',{
+                    posts: mutipleMongooseToObject(posts)
+                })
+            })
+            .catch(next);
+    }
+
+    // [GET] admin/edit
+    edit(req, res, next){
+        Post.findById(req.params.id)
+            .then(post => res.render('admin/edit', {
+                post: mongooseToObject(post)
+            }))
+            .catch(next)
+    }
+
+    // [PUT] /admin/:id
+    update(req, res, next) {
+        Post.updateOne({_id: req.params.id}, req.body)
+            .then(() => res.redirect('/admin/manage'))
+            .catch(next)
     }
 }
 
