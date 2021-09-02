@@ -138,11 +138,12 @@ html{
     line-height: 30px;
     width: 75px;
     text-align: center;
+    border-bottom: 3px solid #fff
 }
 
 .navbar-items:hover{
-    background-color: rgba(60, 59, 60, 0.16);
-    border-radius: 5px;
+    border-bottom: 3px solid #000;
+    transform: translateY(-5px);
 }
 
 .navbar-items >h5{

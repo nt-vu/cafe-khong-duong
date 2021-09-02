@@ -1,4 +1,5 @@
-<h1>Manage Posts</h1>
+<h1 >Manage Posts</h1>
+<h3 style="float: right; margin-top: -30px; margin-right: 21px"><a href="/admin/create">Create Post</a></h3>
 <div class="table">
     <table>
         <colgroup>
@@ -17,24 +18,119 @@
 
         {{#each posts}}
             <tr class="table-item">
-                <th>1</th>
+                <th>{{sum @index 1}}</th>
                 <th>{{this.title}}</th>
                 <th>{{this.createdAt}}</th>
                 <th>
                     <a href="/admin/{{this._id}}/edit">Edit</a>
-                    <a href="" >Delete</a>
+                    <a class="delete-modal" href="#" data-id="{{this._id}}">Delete</a>
                 </th>
             </tr>
         {{/each}}
     </table>
 </div>
 
+<div class="modal">
+    <div class="confirm-modal">
+        <div class="modal-title">
+            <h2>Delete post</h2>
+        </div>
+
+        <div class="modal-alert">
+            <h3>Do you want to delete this post?</h3>
+        </div>
+        <div class="modal-choice">
+            <a href="#" id="choice1"  style="display: inline-block;">Delete</a>
+            <a href="#" id="choice2"  style="display: inline-block;">Cancel</a>
+        </div>
+    </div>
+</div>
 
 
-
+<form name="delete-post-form" method="POST"></form>
 
 
 <style>
+    
+    .modal{
+        display: none;
+        position: fixed;
+        background-color:rgba(0, 0, 0, 0.09);
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+    }
+
+    .modal.open,
+    .confirm-modal.open{
+        display: block;
+    }
+
+    .confirm-modal{
+        display: none;
+        position: absolute;
+        width: 430px;
+        height: 250px;
+        top: 150px;
+        border: 1px solid #000;
+        left: 50%;
+        transform: translate(-50%, 0);
+        background-color: rgb(255, 255, 255);
+        
+    }
+
+    .modal-title{
+        opacity: 1;
+        height: 50px;
+        border-bottom: 2px solid #000;
+        font-family: Arial, Helvetica, sans-serif;
+        line-height: 50px;
+        background-color: rgb(255, 255, 255);
+    }
+
+    .modal-title h2{
+        margin-left: 30px;
+    }
+
+    .modal-alert{
+        display: flex;
+        text-align: center;
+        height: calc(100% - 85px);
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 80%;
+        margin: 0 auto;
+    }
+
+    .modal-alert h3{
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 21px;
+        text-align: justify;
+
+    }
+
+    .modal-choice{
+        width: 100%;
+        background-color: cornsilk;
+        position: absolute;
+        bottom: 0;
+        font-size: 26px;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+
+    #choice1{
+        margin-left: 50px;
+        color: red;
+    }
+
+    #choice2{
+        float: right;
+        margin-right: 50px;
+        color: green;
+    }
+
     .footer{
         display: none;
     }
@@ -89,6 +185,39 @@
     a:hover{
         color: rgb(10, 10, 10);
     }
+
+
 }
 
 </style>
+
+<script>
+    var postId;
+    var deletePostForm = document.forms['delete-post-form'];
+    var modal = document.querySelector('.modal');
+    var deleteFunc = document.querySelectorAll('.delete-modal');
+    var confirmModal = document.querySelector('.confirm-modal');
+    var cancelConfirm = document.getElementById('choice2');
+    var agreelConfirm = document.getElementById('choice1');
+
+
+    for(var i=0 ; i<deleteFunc.length; i++) {
+        deleteFunc[i].onclick = function(e) {
+            confirmModal.classList.add('open');
+            modal.classList.add('open');
+            postId = e.path[0].dataset.id;
+        }
+    }
+
+    agreelConfirm.onclick = function(){
+        deletePostForm.action = '/admin/' + postId + '?_method=DELETE';
+        deletePostForm.submit();
+    }
+
+
+    cancelConfirm.onclick = () => {
+        modal.classList.add('open');
+        modal.classList.remove('open');
+    }
+
+</script>
