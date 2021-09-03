@@ -24,13 +24,25 @@ class AdminController{
 
     // [GET] admin/manage
     manage(req, res, next){
-        Post.find({})
-            .then( (posts) =>{
+        Promise.all([Post.find({}), Post.countDocumentsDeleted()])
+            .then( ([posts, deletedCount]) =>{
                 res.render('admin/manage',{
+                    deletedCount,
                     posts: mutipleMongooseToObject(posts)
                 })
             })
             .catch(next);
+    }
+
+    //[GET] admin/manage/trash
+    trash(req, res, next){
+        Post.findDeleted({})
+            .then((posts) => {
+                res.render('admin/trash', {
+                    posts: mutipleMongooseToObject(posts)
+                })
+            })
+            .catch(next)
     }
 
     // [GET] admin/edit
@@ -51,8 +63,22 @@ class AdminController{
 
     // [DELETE] /admin/:id
     delete(req, res, next) {
+        Post.delete({_id: req.params.id})
+            .then(() => res.redirect('back'))
+            .catch(next)
+    }
+
+    //[DELETE] /admin/:id/destroy
+    destroy(req, res, next) {
         Post.deleteOne({_id: req.params.id})
             .then(() => res.redirect('back'))
+            .catch(next)
+    }
+
+    // [PATCH] /admin/:id/restore
+    restore(req, res, next){
+        Post.restore({_id: req.params.id})
+            .then(()=> res.redirect('back'))
             .catch(next)
     }
 }
