@@ -24,7 +24,8 @@
     "mongoose": "^5.13.7",
     "mongoose-date-format": "^1.2.0",
     "mongoose-delete": "^0.5.4",
-    "mongoose-slug-generator": "^1.0.4"
+    "mongoose-slug-generator": "^1.0.4",
+    "smoothscroll-polyfill": "^0.4.4"
   },
   "devDependencies": {
     "husky": "^7.0.1",
