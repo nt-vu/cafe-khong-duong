@@ -46,7 +46,6 @@
     }
 
     .blog-content-img img{
-        min-height: 180px;
     }
 }
 
@@ -192,16 +191,12 @@
     }
 
     .content-items{
-        height: 300px;
     }
 
     .content-img img{
-        height: 200px;
     }
 
     .content-text{
-        margin: 0 8px;
-        height: 66px;
     }
 
     .content-text__title{
@@ -209,7 +204,6 @@
     }
 
     .content-text__description{
-        display: none;
     }
 
     #see-all{
@@ -240,6 +234,10 @@
     .go_home{
         top: 80vh;
         margin-right: 3px;
+    }
+
+    #show-more{
+        margin-right: 20px;
     }
     
     

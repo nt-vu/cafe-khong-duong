@@ -446,8 +446,8 @@
     }
 
     .wide .row {
-        margin-left: -12px;
-        margin-right: -12px;
+        margin-left: -1px;
+        margin-right: -1px;
     }
 
     .wide .row.sm-gutter {

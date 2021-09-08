@@ -30,7 +30,25 @@
         </div>
         {{/each}}
     </div>
+    <button id="show-more">
+        More
+    </button>
 </div>
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
+
+<script>
+    $(".col.l-8.l-o-2").slice(0,5).show();
+    if($(".col.l-8.l-o-2:hidden").length == 0) {
+             $("#show-more").hide()
+    }
+    $("#show-more").on("click", function() {
+        $(".col.l-8.l-o-2:hidden").slice(0,5).slideDown();
+        if($(".col.l-8.l-o-2:hidden").length == 0) {
+             $("#show-more").fadeOut('slow');
+        }
+    })
+</script>
 
 {{!-- {{#each posts}}
 <div class="blog-content">
