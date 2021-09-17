@@ -57,7 +57,8 @@
 html {
   background-color: white;
   font-family: 'Times New Roman', Times, serif;
-  scroll-behavior: smooth; }
+  scroll-behavior: smooth;
+ }
 
 .navbar {
   transition: 2s;
