@@ -191,19 +191,20 @@ html {
   float: right;
   margin-right: 10%;
   text-decoration: none;
-  height: 36px;
+  height: 32px;
   width: 80px;
+  font-size: 21px;
   text-align: center;
   line-height: 36px;
-  color: honeydew;
-  border-radius: 8px;
+  color: #5178e4;
+  border-radius: 2px;
+  font-style: oblique;
+  border-bottom: 2px solid white;
   font-style: bold;
-  font-family: Exo2;
-  box-shadow: 6px 6px 6px -4px black;
-  background-color: black; }
+  font-family: Exo2; }
 
 #see-all:hover {
-  background: #1e1e1e; }
+  transform: translateY(-3px); }
 
 .footer {
   display: block;
@@ -254,7 +255,7 @@ html {
 
 .blog-content-img img {
   width: 100%;
-  min-height: 200px;
+  height: 200px;
   border: 2px solid #434040;
   border-radius: 10px; }
 
@@ -366,11 +367,19 @@ html {
 
 #show-more {
   float: right;
-  line-height: 31px;
+  line-height: 28px;
   width: 80px;
   font-family: OpenSans;
-  background-color: #000;
-  color: #fff;
+  background-color: white;
+  color: black;
   border-radius: 10px;
   cursor: pointer;
-  font-size: 18px; }
+  font-size: 18px;
+  margin-bottom: 3px;
+  border: 2px solid #000; }
+
+#show-more:hover {
+  background-color: #302c2c;
+  color: blanchedalmond;
+  border: 2px solid #302c2c;
+  transition: 0.4s; }
