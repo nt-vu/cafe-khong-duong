@@ -216,7 +216,7 @@
     }
 
     .blog-content-img img{
-        min-height: 150px;
+        height: 150px;
     }
 
     .blog-content__text{
